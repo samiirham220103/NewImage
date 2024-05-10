@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image & Audio Tool</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Image & Audio Tool</h1>
+      <div class="options">
+        <a href="image-resizer.html">
+          <div class="option">
+            <img src="images/Images-rafiki.png" alt="Image Icon" />
+            <h2><a class="resize-image-link">Resize Image</a></h2>
+            <p>Make your images the perfect size.</p>
+          </div>
+        </a>
+        <a href="audio-compressor.html">
+          <div class="option" id="compress-audio">
+            <img src="images/Podcast audience-rafiki.png" alt="Audio Icon" />
+            <h2>compress size audio</h2>
+            <p>Reduce audio file size without losing quality.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const resizeImageLink = document.querySelector(".resize-image-link");
+        resizeImageLink.addEventListener("click", () => {
+          window.location.href = "image-resizer.html"; // Mengarahkan ke halaman resize image
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const compressAudioLink = document.getElementById("compress-audio");
+        compressAudioLink.addEventListener("click", () => {
+          window.location.href = "audio-compressor.html"; // Mengarahkan ke halaman compress audio
+        });
+      });
+    </script>
+  </body>
+</html>
